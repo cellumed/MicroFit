@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cellumed.healthcare.microfit">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.BIND_DEVICE_ADMIN"
+        tools:ignore="ProtectedPermissions" />
+
+    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:name="com.cellumed.healthcare.microfit.Home.MainApplication"
+        android:largeHeap="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        >
+        <activity
+            android:name="com.cellumed.healthcare.microfit.Home.SplashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+
+        <activity android:name="com.cellumed.healthcare.microfit.Home.Act_Home"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cellumed.healthcare.microfit.Home.Act_ExercisePlan"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cellumed.healthcare.microfit.Home.Act_Program"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cellumed.healthcare.microfit.Home.Act_Favorites"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cellumed.healthcare.microfit.Home.Act_Training"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cellumed.healthcare.microfit.Home.Act_TrainingProgram"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cellumed.healthcare.microfit.Bluetooth.Act_Device_Connect"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cellumed.healthcare.microfit.Setting.Act_Setting"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cellumed.healthcare.microfit.Setting.Act_ExercisePlanManagement"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cellumed.healthcare.microfit.Setting.Act_ProgramManagement"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cellumed.healthcare.microfit.Setting.Act_AddNewProgram"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cellumed.healthcare.microfit.Setting.Act_AddNewExercisePlan"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cellumed.healthcare.microfit.Setting.Act_FavoritesSetting"
+            android:screenOrientation="portrait"/>
+
+        <service
+            android:name="com.cellumed.healthcare.microfit.Bluetooth.BluetoothConnectService"
+            android:enabled="true" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f033df22175cc95c499c83611ec171839c4a44c8" />
+    </application>
+</manifest>

@@ -1,0 +1,225 @@
+<resources>
+    <!--应用程序名称-->
+    <string name="app_name">应用程序名称</string>
+
+    <!--运动计划-->
+    <string name="exercisePlan">运动计划</string>	<!--운동계획-->
+
+    <!--弹出运动计划-->
+    <string name="DetailsExercisePlan" formatted="false">运动计划 %s 详细查看</string>
+    <string name="posture1" formatted="false">运动%d</string>
+
+    <!--一般-->
+    <string name="trainer">教练</string>				<!--트레이너-->
+    <string name="ok">确认</string>					<!--확인-->
+    <string name="close">关闭</string>					<!-- 닫기-->
+    <string name="engineer">技术人员</string>				<!--엔지니어-->
+    <string name="save">保存</string>					<!--저장-->
+    <string name="cancel">取消</string>				<!--취소-->
+    <string name="user">用户</string>					<!--사용자-->
+    <string name="man">男</string>					<!--남-->
+    <string name="Woman">女</string>				<!--여-->
+    <string name="notice">通知</string>				<!--알림-->
+    <string name="selectPlz">请选择。</string>			<!--선택해 주세요.-->
+    <string name="Explanation">说明</string>			<!--설명-->
+    <string name="regDate">注册日期</string>				<!--등록일자-->
+    <string name="minute">分</string>					<!--분-->
+<!--    <string name="minute">分钟</string>			-->		<!--분-->
+
+    <string name="Modified">修改</string>				<!--수정-->
+    <string name="warning">警告</string>				<!--경고-->
+    <string name="backCheck">再次点击返回键退出</string>
+
+
+
+
+    <!--项目-->
+    <string name="program">项目</string>		<!--프로그램-->
+    <!--弹出项目-->
+    <string name="DetailsProgram" formatted="false">项目 %s 详细查看</string>		<!--프로그램Program %s 상세보기details-->
+    <string name="second" formatted="false">%.1f秒</string>				<!--%.1f초-->
+    <string name="secondText" >秒</string>						<!--초-->
+
+    <!--收藏夹-->
+    <string name="favorites">收藏夹</string>						<!--즐겨찾기-->
+    <string name="ExercisePlan1" formatted="false">运动计划</string>		<!--운동계획-->
+    <string name="Program1" formatted="false">项目</string>			<!--프로그램-->
+    <string name="second1" formatted="false">%.1f秒</string>				<!--%.1f 초-->
+    <string name="noAddFabvorites"  >最多可收藏6个项目。</string>		<!--즐겨찾기는 최대 8개 까지 지정이 가능합니다.-->
+    <string name="noFavorites">沒有收藏</string>
+
+    <!--连接-->
+    <string name="ScanTitle">搜索...</string>
+    <string name="Scanning">搜索EMS设备</string>
+    <string name="ConnectTitle">连接...</string>
+    <string name="Connecting">连接至EMS设备</string>
+    <string name="ConnectFailed">无法连接</string>
+    <string name="DisconnectWhileConnect">尝试连接时断开。</string>
+    <string name="MoveToReconnect" >断开BT。移动至连接界面</string>
+    <string name="WrongIdReconnect">错误用户名。移动至连接界面</string>
+	<string name="CannotScan">无法连接</string>
+
+
+    <string name="Time_remaining">剩余时间</string>	<!--남은 시간-->
+    <string name="remaining_number">剩余次数</string>	<!--남은 횟수-->
+    <string name="posture">平衡</string>
+    <!--弹窗-->
+    <string name="Restart">若要要继续，请点击LEVEL/SELECTOR按钮，\n若要结束，请点击结按钮。</string>	<!--계속 하시려면 LEVEL/SELECTOR 버튼을,\n종료하시려면 종료 버튼을 누르세요.-->
+    <string name="End">结束</string>
+
+    <!--设置-->
+    <string name="action_settings">设置</string>
+    <string name="SystemInit_Msg">是否进行系统初始化?</string>	<!--시스템을 초기화 하시겠습니까?-->
+    <string name="DBSaveOK">已提取数据库文件。 </string>	<!--데이터베이스 파일 추출이 완료되었습니다.-->
+    <string name="DBRestore">已恢复数据库文件。</string>	<!--데이터베이스파일 복구가 완료 되었습니다.-->
+    <string name="backup">备份</string>		<!--백업-->
+    <string name="restore">恢复</string>		<!--복구-->
+    <string name="update">更新</string>		<!--업데이트-->
+    <string name="setting">设置</string>		<!--설정-->
+    <string name="UserManagement">用户管理</string>			<!--사용자 관리-->
+    <string name="ManagingFavorites">收藏夹管理 </string>		<!--즐겨찾기 관리-->
+    <string name="ExercisePlanManagement">运动计划管理</string>	<!--운동계획 관리-->
+    <string name="ProgramManagement">项目管理</string>		<!--프로그램 관리-->
+    <string name="DataExtraction">资料提取</string>			<!--자료 추출-->
+    <string name="SystemSetting">系统设置</string>			<!--시스템 설정-->
+    <string name="SystemUpdate">系统更新</string>				<!--시스템 업데이트-->
+    <string name="SystemState">系统状态信息</string>			<!--시스템 상태정보-->
+    <string name="SystemInit">系统初始化</string>			<!--시스템 초기화-->
+    <string name="title">标题</string>				<!--제목-->
+    <string name="division">分类</string>			<!--구분-->
+    <string name="Constructor">创建者</string>			<!--생성자-->
+    <string name="setting_update">无需要更新的文件。</string>	<!--Update 할 파일이 없습니다.-->
+    <string name="languageSetting">设置语言</string>		<!--언어 설정-->
+    <string name="SystemVersion">系统版本</string>
+    <string name="HardwareVersion">硬件版本</string>
+    <string name="FirmwareVersion">固件版本</string>
+    <string name="VersionInfo" formatted="false">Ver. %s 版本信息 </string>
+    <string name="Remove" >删除</string>
+    <string name="SaveDone">数据已保存</string>
+    <string name="InitDone">数据已初始化</string>
+
+
+    <!--弹出用户信息/添加用户-->
+    <string name="removeUser">已删除用户信息。</string>			<!--사용자 정보를 삭제 하였습니다.-->
+    <string name="ModifyingUser">修改用户信息</string>				<!--사용자 정보 수정-->
+    <string name="Modify_the_user_has_failed">用户信息修改失败。</string>	<!--사용자 정보 수정을 실패했습니다.-->
+    <string name="type">类型</string>		<!--타입-->
+    <string name="id">用户名</string>		<!--아이디-->
+    <string name="CurrentPassword">当前密码 </string>		<!--현재 비밀번호 -->
+    <string name="Newpassword">新密码</string>			<!--새 비밀번호 -->
+    <string name="ConfirmPassword">确认密码</string>		<!--비밀번호 확인-->
+    <string name="Password">密码 </string>				<!--비밀번호-->
+    <string name="name">姓名</string>					<!--이름-->
+    <string name="gender">性别 </string>				<!--성별-->
+    <string name="date_of_birth">出生年月日 </string>		<!--생년월일-->
+    <string name="user_explanation">请输入用户说明。</string>		<!--사용자에 대한 설명을 입력하세요.-->
+
+    <!--弹出运动计划 新计划/修改-->
+    <string name="removeExercisePlanByDialog">是否删除所选运动计划? \n\n将删除所属运动计划的所有信息。\n是否继续删除?</string>
+    <!--선택한 운동계획을 삭제하시겠습니까? \n\n해당 운동계획의 모든 정보가 삭제됩니다.\n그래로 삭제하시겠습니까-->
+    <string name="Workout_plan_name">运动计划名称</string>			<!--운동계획 이름-->
+    <string name="PlzWorkoutTime">请输入运动时间。</string>	<!--운동시간을 입력하세요.-->
+    <string name="Repeat_Count">重复次数</string>		<!--반복횟수-->
+    <string name="removeExercisePlan">已删除运动计划。</string>	<!--운동계획을 삭제하였습니다.-->
+    <string name="exercisePlanName">请输入运动计划名称。</string>	<!--운동계획의 이름을 입력하세요.-->
+    <string name="explanation">请输入运动计划说明。</string>	<!--운동계획의 설명을 입력하세요.-->
+    <string name="program_error">请选择项目。</string>			<!--프로그램을 선택하세요.-->
+    <string name="time_error">请输入运动时间。</string>			<!--운동시간을 입력하세요.-->
+    <string name="exercisePlanType">请选择运动姿势。</string>			<!--운동자세를 선택해주세요.-->
+    <string name="RepeatCount">请输入重复次数。</string>		<!--반복 횟수를 입력하세요.-->
+    <string name="Modified_exercise_plan">修改运动计划</string>		<!--운동계획 수정-->
+    <string name="Custom_workout_plans">制定运动计划</string>		<!--운동계획 Custom-->
+    <string name="RepeatCount_error">请将重复次数设置为1以上。</string>		<!--반복 횟수는 1이상 설정하세요.-->
+    <string name="activation">激活</string>		<!--활성-->
+    <string name="Inactive">未激活 </string>			<!--비활성-->
+    <string name="act_inact">未激活 / 激活</string>
+    <string name="repetitions" formatted="false">剩余重复次数 %d/%d</string>		<!--남은 반복 횟수-->
+    <string name="repetitions_error" formatted="false">姿势的重复次数不足%.0f次。\n请添加姿势。</string>	<!--자세의 반복횟수가 %.0f회 부족합니다.\n자세를 추가하세요.-->
+    <string name="repetitions_error2" formatted="false">姿势的重复次数超过%.0f次。\n请减少姿势。</string>		<!--자세의 반복횟수가 %.0f회 초과 되었습니다.자세의 반복횟수가 %.0f회 초과 되었습니다.-->
+    <string name="postureInsert">增加姿势 </string>		<!--자세추가-->
+    <string name="program_msg1">*名称最多可设置25字符。</string>		<!--*이름은 최대 25자 이내로 작성이 가능합니다.-->
+    <string name="programmsg2">*解除时无法查看运动计划目录。</string>	<!--*해제시 운동계획 목록에 보이지 않습니다.-->
+    <string name="programmsg3">*解除时无法查看项目目录。</string>	<!--해제시 프로그램 목록에 보이지 않습니다.-->
+    <string name="ExericsePlanName">请输入运动计划的标题。</string>			<!--운동계획의 제목을 입력하세요.-->
+    <string name="ExericsePlanEx">请输入运动计划相关说明。</string>		<!--운동계획에 대한 설명을 입력하세요.-->
+    <string name="NumberError">请输入数字。</string>
+    <!--筛选条件-->
+    <string name="Adaptive_Pulse">脉冲适应</string>
+    <string name="Metabolism">新陈代谢</string>
+
+    <!--弹出修改/新项目-->
+    <string name="removeProgramBydialog">是否删除所选项目?\n\n将删除所属项目的所有信息。\n是否继续删除?</string>
+    <!--선택한 프로그램을 삭제하시겠습니까?\n\n해당 프로그램의 모든 정보가 삭제됩니다.\n그래로 삭제하시겠습니까?-->
+    <string name="programName">项目名称</string>		<!--项目名称-->
+    <string name="program_explanation">请输入项目相关说明。 </string>	<!--프로그램에 대한 설명을 입력하세요.-->
+    <string name="Add_new_program">添加新项目</string>		<!--새 프로그램 추가-->
+    <string name="Add_exercise_plan">添加新运动计划</string>	<!--새 운동계획 추가-->
+    <string name="Program_modifications">修改项目</string>	<!--프로그램 수정-->
+    <string name="removeProgram">已删除项目。</string>	<!--프로그램을 삭제하였습니다.-->
+    <string name="programNameEmpty">请输入项目名称。 </string>	<!--프로그램의 이름을 입력하세요.-->
+    <string name="programExplanation">请输入项目说明。</string>	<!--프로그램의 설명을 입력하세요.-->
+    <string name="stimulusIntensity_error">请设置刺激强度。</string>	<!--자극강도를 설정하세요.-->
+    <string name="PulseOperationTime_error">请设置脉冲运行时间。</string>	<!--펄스동작시간을 설정하세요.-->
+    <string name="PulsePauseTime_error">请设置脉冲休止时间。</string>		<!--펄스휴지시간을 설정하세요.-->
+    <string name="Frequency_error">请设置频率。</string>			<!--주파수를 설정하세요.-->
+    <string name="PulseWidth_error">请设置脉冲宽度。</string>		<!--펄스폭을 설정하세요.-->
+    <string name="CustomPrograms">自定义项目</string>		<!--프로그램 Custom-->
+    <string name="PulseRiseTime_error">请设置脉冲上升时间。</string>	<!--펄스 상승시간을 설정하세요.-->
+    <string name="time_six_error">请将运动时间设置在1~60分钟范围内。</string>		<!--운동 시간은 1 ~ 60분 범위로 설정하세요.-->
+    <string name="program_error1">请请将脉冲运行时间设置在0~10秒范围内。</string>	<!--펄스동작 시간은 0 ~ 10초 범위로 설정하세요.-->
+    <string name="program_error2">请将脉冲休止时间设置在0~10秒范围内。</string>		<!--펄스휴지 시간은 0 ~ 10초 범위로 설정하세요.-->
+    <string name="program_error3">请将频率设置在2~150Hz范围内。</string>			<!--주파수 2 ~ 150 Hz 범위로 설정하세요.-->
+    <string name="program_error4">请将脉冲宽度设置在50~350μs范围内。</string>			<!--펄스폭 50 ~ 350 μs 범위로 설정하세요.-->
+    <string name="program_error5">请将脉冲上升时间设置在0~1秒范围内。</string>		<!--펄스상승시간 0 ~ 1 초 범위로 설정하세요.-->
+    <string name="exercisePlanName_error">已存在相同名称的运动计划。\n请重新输入。</string>		<!--동일한 운동계획 이름이 존재합니다.\n다시 입력하세요.-->
+    <string name="programName_error">已存在相同名称的项目。\n请重新输入。</string>			<!--동일한 프로그램 이름이 존재합니다.\n다시 입력하세요.-->
+    <string name="pleasetwo">请输入2以上。</string>		<!--2이상 입력하세요.-->
+    <string name="hz">Hz</string>		<!--Hz-->
+    <string name="pleaseone">请输入1以下。</string>	<!--1이하 입력하세요.-->
+    <string name="pleasefive">请输入50以上。</string>	<!--50이상 입력하세요.-->
+    <string name="pleaseonefive">请输入150以下。</string>	<!--150이하 입력하세요.-->
+    <string name="pleaseonefore">请输入400以下。</string>	<!--400이하 입력하세요.-->
+    <string name="pleaseoneten">请输入10以下。</string>	<!--10이하 입력하세요.-->
+    <string name="ProgramName">项目名称</string>				<!--프로그램 이름-->
+    <string name="state">状态</string>					<!--상태-->
+    <string name="ExerciseTime">运动时间</string>				<!--운동시간-->
+    <string name="StimulusIntensity">刺激强度</string>		<!--자극강도-->
+    <string name="PulseOperationTime">脉冲运行时间</string>	<!--펄스동작시간-->
+    <string name="PulsePauseTime">脉冲休止时间</string>		<!--펄스휴지시간-->
+    <string name="frequency">频率 </string>			<!--주파수-->
+    <string name="PulseWidth">脉冲宽度</string>			<!--펄스폭-->
+    <string name="PulseRiseTime">脉冲上升时间 </string>		<!--펄스상승시간-->
+    <string name="ProgramEnter_description">请输入项目相关说明。</string>	<!--프로그램에 대한 설명을 입력하세요.-->
+    <string name="s">μs</string>
+    <!--DB搜索-->
+
+    <string name="fitness">健身</string>
+    <string name="Muscles">增强背部肌肉</string>
+    <string name="ExercisePlanBasic">基本运动计划</string>
+    <string name="ExercisePerformance">运动性能</string>
+    <string name="ManagementBody">体型管理</string>
+    <string name="program1">脉冲适应</string>
+    <string name="program2">基础活化</string>
+    <string name="program3">高级活化</string>
+    <string name="program4">新陈代谢</string>
+    <string name="program5">肌肉放松</string>
+    <string name="duration">持续</string>
+    <string name="none">无</string>
+
+    <!--训练-->
+    <string name="HeartRate">心率</string>
+
+    <!--各频道名称-->
+    <string name="Leg1">腿部1</string>
+    <string name="Leg2">腿部2</string>
+    <string name="Back_Up">背部抬升</string>
+    <string name="Back_Down">背部下压</string>
+    <string name="Hips">臀部</string>
+    <string name="Chest">胸部</string>
+    <string name="Abdomen">腹部</string>
+    <string name="Arms">胳膊</string>
+
+
+
+
+</resources>
