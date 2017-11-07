@@ -1,6 +1,6 @@
 <resources>
     <!--应用程序名称-->
-    <string name="app_name">应用程序名称</string>
+    <string name="app_name">MicroFit</string>
 
     <!--运动计划-->
     <string name="exercisePlan">运动计划</string>	<!--운동계획-->
