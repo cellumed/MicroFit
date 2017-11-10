@@ -6,6 +6,7 @@
     android:orientation="vertical"
     tools:context=".Home.SplashActivity">
 
+    <!--
     <ImageView
         android:id="@+id/splashscreen"
         android:layout_width="fill_parent"
@@ -13,4 +14,13 @@
         android:layout_gravity="center"
         android:scaleType="fitXY"
         android:background="@drawable/splash_screen" />
+    -->
+
+    <TextView
+        android:background="@drawable/splash_screen"
+        android:text="Ver 1.0.0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/version"
+        android:gravity="bottom|center" />
 </LinearLayout>

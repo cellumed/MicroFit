@@ -2,15 +2,18 @@ package com.cellumed.healthcare.microfit.Setting;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -28,8 +31,14 @@ import com.cellumed.healthcare.microfit.Util.BudUtil;
 import com.cellumed.healthcare.microfit.Util.SqliteToExcel;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Locale;
 
 import butterknife.ButterKnife;
 
@@ -37,6 +46,8 @@ import butterknife.ButterKnife;
 
 public class Act_Setting extends BTConnectActivity implements OnAdapterClick {
     private Context mContext;
+    private static final String AUTHORITY="com.commonsware.android.cp.v4file";
+    ImageButton bt_info;
 
     @Override
     protected void connectedDevice() {}
@@ -49,11 +60,23 @@ public class Act_Setting extends BTConnectActivity implements OnAdapterClick {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_setting);
         ButterKnife.bind(this);
+
+        bt_info = (ImageButton)findViewById(R.id.bt_system_state);
+        bt_info.setOnClickListener(bt_info_listener);
+
         mContext = this;
         BudUtil.actList.add(this);
         setCustomActionbar();
 
     }
+
+    ImageButton.OnClickListener bt_info_listener = new View.OnClickListener() {
+
+        @Override
+        public void onClick(View v) {
+            read_manual_target26();
+        }
+    };
 
     @Override
     protected void onDestroy() {
@@ -137,12 +160,143 @@ public class Act_Setting extends BTConnectActivity implements OnAdapterClick {
         systemInitDialog();
     }
 
+
+    public void read_manual(){
+
+        Log.i("", "read manual");
+
+        try {
+            final Locale locale = mContext.getResources().getConfiguration().locale;
+            String manual_name = "";
+            String copyPath = "";
+
+            if (locale.getLanguage().equals("ko")) {
+                manual_name = "manual_ko.pdf";
+                copyPath = "/sdcard/Download/" + manual_name;
+            }
+            else if (locale.getLanguage().equals("zh")) {
+                manual_name = "manual_zh.pdf";
+                copyPath = "/sdcard/Download/" + manual_name;
+            }
+            else if (locale.getLanguage().equals("ja")) {
+                manual_name = "manual_ja.pdf";
+                copyPath = "/sdcard/Download/" + manual_name;
+            }
+            else {
+                manual_name = "manual_en.pdf";
+                copyPath = "/sdcard/Download/" + manual_name;
+            }
+
+            AssetManager am = mContext.getResources().getAssets();
+            InputStream is = am.open(manual_name);
+            byte buff[] = new byte[1024];
+            int read;
+
+            File file = new File(copyPath);
+            if(file.exists()){
+                Log.i("", "Exist File !!!");
+            }
+            else{
+                OutputStream os = new FileOutputStream(copyPath);
+
+                while( ( read = is.read(buff)) != -1){
+                    os.write(buff, 0, read);
+                }
+                is.close();
+                os.flush();
+                os.close();
+            }
+
+            Intent intent = new Intent();
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.setAction(android.content.Intent.ACTION_VIEW);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.setDataAndType(Uri.fromFile(new File(copyPath)), "application/pdf");
+
+            startActivity(intent);
+
+        }catch(ActivityNotFoundException e){
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void read_manual_target26(){
+
+        Log.i("pain0928", "read manual_target26");
+
+        try {
+            final Locale locale = mContext.getResources().getConfiguration().locale;
+            String manual_name = "";
+            String copyPath = "";
+
+            if (locale.getLanguage().equals("ko")) {
+                manual_name = "manual_ko.pdf";
+                copyPath = Environment.getExternalStorageDirectory().getPath() + "/Download/" + manual_name;
+            }
+            else if (locale.getLanguage().equals("zh")) {
+                manual_name = "manual_zh.pdf";
+                copyPath = Environment.getExternalStorageDirectory().getPath() + "/Download/" + manual_name;
+            }
+            else if (locale.getLanguage().equals("ja")) {
+                manual_name = "manual_ja.pdf";
+                copyPath = Environment.getExternalStorageDirectory().getPath() + "/Download/" + manual_name;
+            }
+            else {
+                manual_name = "manual_en.pdf";
+                copyPath = Environment.getExternalStorageDirectory().getPath() + "/Download/" + manual_name;
+            }
+            Log.i("pain0928", "Copy Path:" + copyPath);
+
+            Log.i("pain0928", "file-path:" + mContext.getFilesDir().getPath());
+            Log.i("pain0928", "external-path:" + Environment.getExternalStorageDirectory().getPath());
+
+            AssetManager am = mContext.getResources().getAssets();
+            InputStream is = am.open(manual_name);
+            byte buff[] = new byte[1024];
+            int read;
+
+            File file = new File(copyPath);
+            if(file.exists()){
+                Log.i("", "Exist File !!!");
+            }
+            else{
+                OutputStream os = new FileOutputStream(copyPath);
+
+                while( ( read = is.read(buff)) != -1){
+                    os.write(buff, 0, read);
+                }
+                is.close();
+                os.flush();
+                os.close();
+            }
+
+            PackageInfo pi = getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0);
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setDataAndType(FileProvider.getUriForFile(this, pi.packageName + ".fileprovider", file),"application/pdf");
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+            startActivity(intent);
+
+        }catch(ActivityNotFoundException e){
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void versionInfo (View view) {
+        /*
         String version= "";
         try {
             PackageInfo pi = getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0);
             version = pi.versionName;
         } catch(PackageManager.NameNotFoundException e) { }
+
 
         MaterialDialog.Builder builder = new MaterialDialog.Builder(mContext);
         builder
@@ -155,6 +309,9 @@ public class Act_Setting extends BTConnectActivity implements OnAdapterClick {
                     dialog.dismiss();
 
                 }).show();
+        */
+        //read_manual();
+        read_manual_target26();
     }
 
     public  void systemInitDialog(){

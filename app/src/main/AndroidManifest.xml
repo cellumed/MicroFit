@@ -81,5 +81,17 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="f033df22175cc95c499c83611ec171839c4a44c8" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.cellumed.healthcare.microfit.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider" />
+        </provider>
     </application>
+
+
 </manifest>

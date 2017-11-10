@@ -126,7 +126,6 @@
                 android:id="@+id/bt_system_state"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="versionInfo"
                 android:background="@android:color/transparent"
                 android:contentDescription="@string/SystemState"
                 android:scaleType="fitCenter"

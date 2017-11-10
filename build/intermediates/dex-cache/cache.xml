@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Android\MicroFit\app\libs\android-directionalviewpager-1.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="41020b21b5bac937e35333a0e6dcfd9226fce577">
+        <dex dex="C:\Android\MicroFit\app\build\intermediates\pre-dexed\debug\android-directionalviewpager-1.2.0_01c94fce761399368fcae577b9bda34fb19eef98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\MicroFit\app\libs\poi-3.13-20150929.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0f59f504ba8c521e61e25f417ec652fd485010f3">
+        <dex dex="C:\Android\MicroFit\app\build\intermediates\pre-dexed\debug\poi-3.13-20150929_a92724fe6464957208cb0bbbc1d93812a6eb170a.jar" />
+    </item>
+
+</items>
